@@ -1,14 +1,17 @@
 import { z } from "zod";
 
 export const GetPictureModel = z.object({
-  icons: z.string().default("all").transform((icon) => icon.split(",")),
+  icons: z
+    .string()
+    .default("all")
+    .transform((icon) => icon.split(",")),
   theme: z.enum(["dark", "white"]).default("dark"),
   size: z
     .enum(["32", "48", "64"])
     .default("48")
     .transform((content) => parseInt(content)),
   spacing: z
-    .enum(["0", "5", "10"])
+    .enum(["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
     .default("5")
     .transform((content) => parseInt(content)),
   iconsPerLine: z

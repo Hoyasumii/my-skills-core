@@ -1,10 +1,7 @@
 {
-  "name": "api",
+  "name": "my-skills-core",
   "type": "module",
   "scripts": {
-    "start:dev": "tsx watch src/server.ts",
-    "build": "tsup src/server.ts",
-    "start": "node dist/server.cjs",
     "pick:content": "tsx pick-content.ts"
   },
   "dependencies": {
