@@ -1,5 +1,5 @@
 import process from "node:process";
-import { PictureRepositoryInterface } from "@/repositories";
+import { PictureRepositoryInterface } from "~/repositories";
 import { readdir } from "node:fs/promises";
 import path from "node:path";
 import { existsSync } from "node:fs";

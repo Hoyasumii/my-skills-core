@@ -1,5 +1,5 @@
-import { PictureRepository } from "@/repositories/in-memory";
-import { ListPictures } from "@/services/pictures";
+import { PictureRepository } from "~/repositories/in-memory";
+import { ListPictures } from "~/services/pictures";
 
 export function makeListPictures(): ListPictures {
   const repository = new PictureRepository();

@@ -1,4 +1,4 @@
-import { PictureRepositoryInterface } from "@/repositories";
+import { PictureRepositoryInterface } from "~/repositories";
 import database from "./database";
 
 export class PictureRepository implements PictureRepositoryInterface {

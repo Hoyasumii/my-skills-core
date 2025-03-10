@@ -1,7 +1,7 @@
-import { GetPictureModel } from "@/models/pictures";
-import { PictureRepositoryInterface } from "@/repositories";
-import { Service } from "@/services";
-import { processPictureBuffer } from "@/utils";
+import { GetPictureModel } from "~/models/pictures";
+import { PictureRepositoryInterface } from "~/repositories";
+import { Service } from "~/services";
+import { processPictureBuffer } from "~/utils";
 import sharp from "sharp";
 
 export class GettingPictures
