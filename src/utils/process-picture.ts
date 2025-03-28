@@ -1,18 +1,16 @@
-import sharp from "sharp";
-
 type ProcessPictureBufferReturn = {
   width: number;
   height: number;
-  content: Array<sharp.OverlayOptions>;
+  content: Array<string>;
 };
 
-export function processPictureBuffer(
-  pictures: Array<Buffer>,
+export function processPicture(
+  pictures: Array<string>,
   iconsPerLine: number,
   size: number,
   spacing: number
 ): ProcessPictureBufferReturn {
-  const compositeContent: Array<sharp.OverlayOptions> = [];
+  const iconsColleciton: Array<string> = [];
 
   const baseWidth =
     pictures.length > iconsPerLine ? iconsPerLine : pictures.length;
@@ -25,18 +23,20 @@ export function processPictureBuffer(
     const row = Math.floor(index / iconsPerLine);
     const col = index % iconsPerLine;
 
-    const top = row * (size + spacing);
-    const left = col * (size + spacing);
+    const x = row * (size + spacing);
+    const y = col * (size + spacing);
 
-    compositeContent.push({
-      input: picture,
-      top,
-      left,
-    });
+    // iconsColleciton.push({
+    //   input: picture,
+    //   top: x,
+    //   left: y,
+    // });
+
+    iconsColleciton.push(`<g transform="translate(${x}, ${y})">${picture}</g>`);
   });
 
   return {
-    content: compositeContent,
+    content: iconsColleciton,
     width,
     height,
   };

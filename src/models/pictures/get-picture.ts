@@ -5,7 +5,6 @@ export const GetPictureModel = z.object({
     .string()
     .default("all")
     .transform((icon) => icon.split(",")),
-  theme: z.enum(["dark", "white"]).default("dark"),
   size: z
     .enum(["32", "48", "64"])
     .default("48")
