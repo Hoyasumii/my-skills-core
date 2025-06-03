@@ -1,5 +1,5 @@
-import { PictureRepositoryInterface } from "~/repositories";
-import { Service } from "~/services";
+import type { PictureRepositoryInterface } from "~/providers";
+import type { Service } from "~/services";
 
 export class ListPictures
   implements Service<PictureRepositoryInterface, undefined, Array<string>>

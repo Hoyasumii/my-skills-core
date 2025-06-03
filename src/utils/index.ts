@@ -1,1 +1,1 @@
-export { processPicture } from "./process-picture";
+export { processPictureBuffer } from "./process-picture-buffer";
