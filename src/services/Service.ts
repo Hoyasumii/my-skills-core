@@ -1,4 +1,4 @@
-export interface Service<Repository, Args, ReturnType> {
-  repository: Repository;
+export interface Service<Provider, Args, ReturnType> {
+  provider: Provider;
   run(data: Args): Promise<ReturnType>;
 }

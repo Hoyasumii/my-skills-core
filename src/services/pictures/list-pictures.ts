@@ -1,12 +1,12 @@
-import type { PictureRepositoryInterface } from "~/providers";
+import type { PictureProviderInterface } from "~/providers";
 import type { Service } from "~/services";
 
 export class ListPictures
-  implements Service<PictureRepositoryInterface, undefined, Array<string>>
+  implements Service<PictureProviderInterface, undefined, Array<string>>
 {
-  constructor(public repository: PictureRepositoryInterface) {}
+  constructor(public provider: PictureProviderInterface) {}
 
   async run(_ = undefined): Promise<Array<string>> {
-    return await this.repository.getAll();
+    return await this.provider.getAll();
   }
 }
